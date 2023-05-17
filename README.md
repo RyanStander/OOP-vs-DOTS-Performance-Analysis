@@ -148,7 +148,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 - [ ] Feature 3
     - [ ] Nested Feature
 
-See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/RyanStander/OOP-vs-DOTS-Performance-Analysis/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -184,9 +184,9 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/ryan_stander) - email@email_client.com
+Ryan Stander - [@ryan_stander](https://twitter.com/ryan_stander) - ryan.stander@outlook.com
 
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
+Project Link: [https://github.com/RyanStander/OOP-vs-DOTS-Performance-Analysis](https://github.com/RyanStander/OOP-vs-DOTS-Performance-Analysis)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
