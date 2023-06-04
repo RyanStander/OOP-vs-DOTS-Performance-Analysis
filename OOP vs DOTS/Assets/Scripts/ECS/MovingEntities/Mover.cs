@@ -1,8 +1,10 @@
-﻿
-using Unity.Entities;
-using Unity.Mathematics;
+﻿using Unity.Entities;
 
-public struct Mover : IComponentData
+namespace ECS.MovingEntities
 {
-    public float speed;
+    public struct Mover : IComponentData
+    {
+        public Entity Object;
+        public float Speed;
+    }
 }
