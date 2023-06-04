@@ -168,4 +168,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Object: {fileID: 202383882}
+  Transform: {fileID: 202383883}
   Speed: 3
