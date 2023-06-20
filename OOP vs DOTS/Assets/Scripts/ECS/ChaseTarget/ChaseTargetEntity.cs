@@ -10,30 +10,30 @@ namespace ECS.ChaseTarget
         public Transform ChaserTransform;
         public float ChaserSpeed;
         public Transform TargetTransform;
-    }
-    
-    public class ChaseTargetBaker : Baker<ChaseTargetEntity>
-    {
-        public override void Bake(ChaseTargetEntity authoring)
+
+        public class ChaseTargetBaker : Baker<ChaseTargetEntity>
         {
-            var entity = GetEntity(TransformUsageFlags.None);
-            AddComponent(entity, new ChaseTargetComponent
+            public override void Bake(ChaseTargetEntity authoring)
             {
-                ChaserObject = GetEntity(authoring.ChaserObject, TransformUsageFlags.Dynamic),
-                ChaserTransform = new LocalTransform
+                var entity = GetEntity(TransformUsageFlags.Dynamic);
+                AddComponent(entity, new ChaseTargetComponent
                 {
-                    Position = authoring.ChaserTransform.localPosition,
-                    Rotation = authoring.ChaserTransform.localRotation,
-                    Scale = authoring.ChaserTransform.localScale.x
-                },
-                ChaserSpeed = authoring.ChaserSpeed,
-                TargetTransform = new LocalTransform
-                {
-                    Position = authoring.TargetTransform.localPosition,
-                    Rotation = authoring.TargetTransform.localRotation,
-                    Scale = authoring.TargetTransform.localScale.x
-                }
-            });
+                    ChaserObject = GetEntity(authoring.ChaserObject, TransformUsageFlags.Dynamic),
+                    ChaserTransform = new LocalTransform
+                    {
+                        Position = authoring.ChaserTransform.localPosition,
+                        Rotation = authoring.ChaserTransform.localRotation,
+                        Scale = authoring.ChaserTransform.localScale.x
+                    },
+                    ChaserSpeed = authoring.ChaserSpeed,
+                    TargetTransform = new LocalTransform
+                    {
+                        Position = authoring.TargetTransform.localPosition,
+                        Rotation = authoring.TargetTransform.localRotation,
+                        Scale = authoring.TargetTransform.localScale.x
+                    }
+                });
+            }
         }
     }
 }

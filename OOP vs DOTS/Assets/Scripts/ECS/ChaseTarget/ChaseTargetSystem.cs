@@ -43,7 +43,7 @@ namespace ECS.ChaseTarget
             {
                 move = distance;
             }
-            
+
             //chaseTargetComponent.ValueRW.ChaserTransform.Translate(direction * move);
             chaseTargetComponent.ValueRW.ChaserTransform.Position += (float3)(direction * move);
 
