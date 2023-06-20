@@ -2,7 +2,9 @@ using ECS.Config;
 using Unity.Burst;
 using Unity.Collections;
 using Unity.Entities;
+using Unity.Mathematics;
 using Unity.Rendering;
+using Unity.Transforms;
 
 namespace ECS.Enemy
 {
@@ -12,7 +14,7 @@ namespace ECS.Enemy
         public void OnCreate(ref SystemState state)
         {
             state.RequireForUpdate<SkeletonSpawning>();
-            state.RequireForUpdate<ConfigEntityComponentData>(); 
+            state.RequireForUpdate<ConfigEntityComponentData>();
         }
 
         [BurstCompile]
@@ -22,17 +24,32 @@ namespace ECS.Enemy
 
             var config = SystemAPI.GetSingleton<ConfigEntityComponentData>();
 
-            var ecb = new EntityCommandBuffer(Allocator.Temp);
+            var entityCommandBuffer = new EntityCommandBuffer(Allocator.Temp);
             var enemies = new NativeArray<Entity>(config.SkeletonCount, Allocator.Temp);
-            ecb.Instantiate(config.SkeletonPrefab, enemies);
+            entityCommandBuffer.Instantiate(config.SkeletonPrefab, enemies);
 
-            ecb.Playback(state.EntityManager);
+            var spawnRadius = 3f;
+
+            //Randomly position the enemy around the point 0,0,0 in a spherical fashion
+            for (int i = 0; i < enemies.Length; i++)
+            {
+                var position = new float3(UnityEngine.Random.Range(-spawnRadius, spawnRadius),
+                        UnityEngine.Random.Range(-spawnRadius, spawnRadius), 0)
+                    ;
+                entityCommandBuffer.SetComponent(enemies[i], new LocalTransform()
+                {
+                    Position = position,
+                    Rotation = quaternion.identity,
+                    Scale = 1f
+                });
+            }
+
+            entityCommandBuffer.Playback(state.EntityManager);
         }
 
         [BurstCompile]
         public void OnDestroy(ref SystemState state)
         {
-
         }
     }
 }
