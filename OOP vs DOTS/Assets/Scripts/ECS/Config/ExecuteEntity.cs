@@ -1,4 +1,5 @@
 using ECS.Camera;
+using ECS.Player;
 using Unity.Entities;
 using UnityEditor.SceneManagement;
 using UnityEngine;
@@ -22,6 +23,7 @@ namespace ECS.Config
                 var entity = GetEntity(TransformUsageFlags.None);
 
                 if(authoring.playerEnabled) AddComponent<PlayerSpawning>(entity);
+                if(authoring.playerEnabled) AddComponent<PlayerMovementComponent>(entity);
                 
                 if (authoring.cameraEnabled) AddComponent<Camera>(entity);
                 if (authoring.safeZoneEnabled) AddComponent<SafeZone>(entity);
@@ -38,6 +40,10 @@ namespace ECS.Config
     }
 
     public struct PlayerSpawning : IComponentData
+    {
+    }
+    
+    public struct PlayerMovementComponent : IComponentData
     {
     }
 }
