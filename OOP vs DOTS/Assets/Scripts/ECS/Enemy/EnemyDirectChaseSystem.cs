@@ -6,6 +6,7 @@ using Unity.Entities;
 using Unity.Mathematics;
 using Unity.Transforms;
 using UnityEngine;
+using EnemyDirectChase = OOP.Enemy.EnemyDirectChase;
 
 namespace ECS.Enemy
 {
