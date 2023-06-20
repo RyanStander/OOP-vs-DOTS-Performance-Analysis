@@ -402,7 +402,7 @@ GameObject:
   - component: {fileID: 987832135}
   - component: {fileID: 987832134}
   m_Layer: 0
-  m_Name: Enemies
+  m_Name: Entities
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
