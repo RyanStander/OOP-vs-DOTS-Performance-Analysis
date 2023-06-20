@@ -37,7 +37,6 @@ namespace ECS.Enemy
             foreach (var (playerTransform, entity) in SystemAPI.Query<RefRW<LocalTransform>>().WithAll<PlayerComponentData>()
                          .WithEntityAccess())
             {
-                Debug.Log("Found player to follow");
                 playerToFollow = playerTransform.ValueRO;
                 break;
             }

@@ -156,7 +156,7 @@ MonoBehaviour:
   playerEnabled: 1
   cameraEnabled: 1
   safeZoneEnabled: 1
-  skeletonEnabled: 0
+  skeletonEnabled: 1
 --- !u!114 &1034633747
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -171,6 +171,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerPrefab: {fileID: 217801386110843838, guid: d5d50580a63cbb1448c508bdb6895ae9, type: 3}
   SafeZoneRadius: 10
+  SkeletonPrefab: {fileID: 826522595574820320, guid: f57941539267ca542b6bf8d82c921931, type: 3}
+  SkeletonCount: 10
 --- !u!4 &1034633748
 Transform:
   m_ObjectHideFlags: 0

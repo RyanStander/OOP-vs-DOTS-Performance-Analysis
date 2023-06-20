@@ -1,10 +1,10 @@
-﻿using ECS.InputMove;
+﻿using ECS.Player;
 using Unity.Burst;
 using Unity.Collections;
 using Unity.Entities;
+using Unity.Mathematics;
 using Unity.Transforms;
 using UnityEngine;
-using UnityEngine.Windows;
 using Random = Unity.Mathematics.Random;
 
 namespace ECS.Camera
@@ -17,30 +17,31 @@ namespace ECS.Camera
         [BurstCompile]
         public void OnCreate(ref SystemState state)
         {
-            state.RequireForUpdate<UnityEngine.Camera>();
+            state.RequireForUpdate<Config.Camera>();
             random = new Random(123);
         }
 
-        [BurstCompile]
+        // Because this OnUpdate accesses managed objects, it cannot be Burst-compiled.
         public void OnUpdate(ref SystemState state)
         {
             if (target == Entity.Null)
             {
-                var entityQuery = SystemAPI.QueryBuilder().WithAny<InputMoveComponent>().Build();
+                var entityQuery = SystemAPI.QueryBuilder().WithAny<PlayerComponentData>().Build();
                 var player = entityQuery.ToEntityArray(Allocator.Temp);
-
+                
                 if (player.Length == 0)
                     return;
-
                 target = player[random.NextInt(player.Length)];
             }
 
             var cameraTransform = CameraSingleton.Instance.transform;
-            var playerTransform = SystemAPI.GetComponent<LocalToWorld>(target);
-            cameraTransform.position = playerTransform.Position;
-            /*cameraTransform.position -= 10.0f * (Vector3)playerTransform.Forward;
-            cameraTransform.position += new Vector3(0, 5f, 0);
-            cameraTransform.LookAt(playerTransform.Position);*/
+            var cameraPosition = cameraTransform.position;
+            var playerPosition = SystemAPI.GetComponent<LocalToWorld>(target).Position;
+
+            var newPosition =math.lerp(cameraPosition,playerPosition, 0.1f);
+            newPosition.z = -1;
+            
+            cameraTransform.position = newPosition;
         }
 
         [BurstCompile]
