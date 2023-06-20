@@ -27,6 +27,9 @@ namespace ECS.Config
                 
                 if (authoring.cameraEnabled) AddComponent<Camera>(entity);
                 if (authoring.safeZoneEnabled) AddComponent<SafeZone>(entity);
+                
+                if (authoring.skeletonEnabled) AddComponent<SkeletonSpawning>(entity);
+                if (authoring.skeletonEnabled) AddComponent<EnemyDirectChase>(entity);
             }
         }
     }
@@ -44,6 +47,14 @@ namespace ECS.Config
     }
     
     public struct PlayerMovementComponent : IComponentData
+    {
+    }
+    
+    public struct SkeletonSpawning : IComponentData
+    {
+    }
+    
+    public struct EnemyDirectChase : IComponentData
     {
     }
 }

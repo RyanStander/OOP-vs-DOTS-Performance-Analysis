@@ -7,6 +7,9 @@ namespace ECS.Config
     {
         public GameObject PlayerPrefab;
         public float SafeZoneRadius;
+        
+        public GameObject SkeletonPrefab;
+        public int SkeletonCount=10;
 
         public class ConfigEntityBaker : Baker<ConfigEntity>
         {
@@ -17,7 +20,10 @@ namespace ECS.Config
                     new ConfigEntityComponentData
                         {
                             PlayerPrefab = GetEntity(authoring.PlayerPrefab, TransformUsageFlags.Dynamic),
-                            SafeZoneRadius = authoring.SafeZoneRadius
+                            SafeZoneRadius = authoring.SafeZoneRadius,
+                            
+                            SkeletonPrefab = GetEntity(authoring.SkeletonPrefab, TransformUsageFlags.Dynamic),
+                            SkeletonCount = authoring.SkeletonCount
                         });
             }
         }
@@ -27,5 +33,8 @@ namespace ECS.Config
     {
         public Entity PlayerPrefab;
         public float SafeZoneRadius;
+        
+        public Entity SkeletonPrefab;
+        public int SkeletonCount;
     }
 }

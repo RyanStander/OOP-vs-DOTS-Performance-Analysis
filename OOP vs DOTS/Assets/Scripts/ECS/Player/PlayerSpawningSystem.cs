@@ -24,17 +24,9 @@ namespace ECS.Player
 
             var config = SystemAPI.GetSingleton<ConfigEntityComponentData>();
 
-            var query = SystemAPI.QueryBuilder().WithAll<PlayerEntity>().Build();
-            var queryMask = query.GetEntityQueryMask();
-            
             var entityCommandBuffer = new EntityCommandBuffer(Allocator.Temp);
             var players= new NativeArray<Entity>(1, Allocator.Temp);
             entityCommandBuffer.Instantiate(config.PlayerPrefab, players);
-
-            foreach (var player in players)
-            {
-                //entityCommandBuffer.SetComponentForLinkedEntityGroup(player,queryMask,new PlayerEntity());
-            }
 
             entityCommandBuffer.Playback(state.EntityManager);
         }
