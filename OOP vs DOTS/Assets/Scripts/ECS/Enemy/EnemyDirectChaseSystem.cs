@@ -1,4 +1,3 @@
-using System.Linq;
 using ECS.Config;
 using ECS.Player;
 using Unity.Burst;
@@ -6,7 +5,6 @@ using Unity.Entities;
 using Unity.Mathematics;
 using Unity.Transforms;
 using UnityEngine;
-using EnemyDirectChase = OOP.Enemy.EnemyDirectChase;
 
 namespace ECS.Enemy
 {
