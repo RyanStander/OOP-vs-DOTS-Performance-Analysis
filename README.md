@@ -53,13 +53,8 @@
     </li>
     <li>
       <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -82,14 +77,8 @@
 
 ### Built With
 
-* [![Next][Next.js]][Next-url]
-* [![React][React.js]][React-url]
-* [![Vue][Vue.js]][Vue-url]
-* [![Angular][Angular.io]][Angular-url]
-* [![Svelte][Svelte.dev]][Svelte-url]
-* [![Laravel][Laravel.com]][Laravel-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
+* [![Unity][Unity3D]][Unity-url]
+* [![React][SiRider]][Rider-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -98,60 +87,19 @@
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
-
-### Installation
-
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/RyanStander/OOP-vs-DOTS-Performance-Analysis.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
+To get a local copy up and running, make sure to have the [Unity Hub](https://unity.com/download), when you have the repository cloned, you can open the OOP vs DOTS folder with the Unity Hub and it will give you the recommended version to download. All other required files should automatically be set up once you open it.
+Make sure that Enter Playmode Options are turned off at all times, it causes leaks with the ECS system.
 
 
 <!-- USAGE EXAMPLES -->
 ## Usage
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+Once you have the project open, you can modify as you see fit. Make sure to make use of the [Unity Profiler](https://docs.unity3d.com/Manual/Profiler.html) if you want to get performance statistics for the game.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- ROADMAP -->
-## Roadmap
-
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
-
-See the [open issues](https://github.com/RyanStander/OOP-vs-DOTS-Performance-Analysis/issues) for a full list of proposed features (and known issues).
+If you have further resources to submit for performance analysis of the two systems, be sure to look at the Contributing section below. Any other contributions to help build this repository up is greatly appreciated!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 <!-- CONTRIBUTING -->
@@ -175,7 +123,7 @@ Don't forget to give the project a star! Thanks again!
 <!-- LICENSE -->
 ## License
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+Distributed under the MIT License. See [LICENSE](https://github.com/RyanStander/OOP-vs-DOTS-Performance-Analysis/blob/main/LICENSE) for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -195,8 +143,11 @@ Project Link: [https://github.com/RyanStander/OOP-vs-DOTS-Performance-Analysis](
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-* []()
-* []()
+* [Unity DOTS](https://unity.com/dots)
+* [Rider Unity DOTS Support](https://blog.jetbrains.com/dotnet/2023/03/16/unity-dots-support-in-rider-2023-1/)
+* [Getting Started Entities](https://docs.unity3d.com/Packages/com.unity.entities@1.0/manual/getting-started.html)
+* [Sprite sheet animation with ECS](https://www.youtube.com/watch?v=tvi44I_SK3w)
+* [ECS Samples](https://www.youtube.com/watch?v=tvi44I_SK3w)
 * []()
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -218,19 +169,7 @@ Project Link: [https://github.com/RyanStander/OOP-vs-DOTS-Performance-Analysis](
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/ryan-stander/
 [product-screenshot]: images/screenshot.png
-[Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
-[Next-url]: https://nextjs.org/
-[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
-[React-url]: https://reactjs.org/
-[Vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
-[Vue-url]: https://vuejs.org/
-[Angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
-[Angular-url]: https://angular.io/
-[Svelte.dev]: https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00
-[Svelte-url]: https://svelte.dev/
-[Laravel.com]: https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white
-[Laravel-url]: https://laravel.com
-[Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
-[Bootstrap-url]: https://getbootstrap.com
-[JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
-[JQuery-url]: https://jquery.com 
+[Unity3D]: https://img.shields.io/badge/Unity-000000?style=for-the-badge&logo=unity&logoColor=white
+[Unity-url]: https://unity.com
+[SiRider]: https://img.shields.io/badge/Rider-000000?style=for-the-badge&logo=rider&logoColor=white
+[Rider-url]: https://www.jetbrains.com/rider/
