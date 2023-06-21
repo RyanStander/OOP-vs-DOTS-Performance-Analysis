@@ -9,14 +9,12 @@ namespace ECS.Player
 {
     public partial struct PlayerMovementSystem : ISystem
     {
-
-        [BurstCompile]
+        
         public void OnCreate(ref SystemState state)
         {
             state.RequireForUpdate<PlayerMovementComponent>();
-        }
-
-        [BurstCompile]
+        }  
+        
         public void OnUpdate(ref SystemState state)
         {
             var deltaTime = Time.deltaTime;
