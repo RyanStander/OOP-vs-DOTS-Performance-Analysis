@@ -1,12 +1,5 @@
 <a name="readme-top"></a>
 <!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
@@ -20,10 +13,10 @@
 <br />
 <div align="center">
   <a href="https://github.com/RyanStander/OOP-vs-DOTS-Performance-Analysis">
-    <img src="https://i.ytimg.com/vi/0VQyWo-gb2c/mqdefault.jpg" alt="Logo" width="320" height="180">
+    <img src="https://github.com/RyanStander/OOP-vs-DOTS-Performance-Analysis/blob/main/ReadMeImages/TitleImage.png" alt="Logo" width="320" height="180">
   </a>
 
-<h3 align="center">OOP vs DOTS Performance Analysis</h3>
+<h3 align="center">Performance Analysis</h3>
 
   <p align="center">
     A look at the value that Data-oriented technology stack holds over Object-oriented programming in Unity
@@ -66,14 +59,7 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
-
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 
 ### Built With
 
@@ -168,7 +154,6 @@ Project Link: [https://github.com/RyanStander/OOP-vs-DOTS-Performance-Analysis](
 [license-url]: https://github.com/RyanStander/OOP-vs-DOTS-Performance-Analysis/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/ryan-stander/
-[product-screenshot]: images/screenshot.png
 [Unity3D]: https://img.shields.io/badge/Unity-000000?style=for-the-badge&logo=unity&logoColor=white
 [Unity-url]: https://unity.com
 [SiRider]: https://img.shields.io/badge/Rider-000000?style=for-the-badge&logo=rider&logoColor=white
