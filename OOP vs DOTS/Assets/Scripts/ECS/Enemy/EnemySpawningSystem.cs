@@ -30,12 +30,14 @@ namespace ECS.Enemy
 
             var spawnRadius = 3f;
 
+            var random = new Random(123);
+
             //Randomly position the enemy around the point 0,0,0 in a spherical fashion
             for (int i = 0; i < enemies.Length; i++)
             {
-                var position = new float3(UnityEngine.Random.Range(-spawnRadius, spawnRadius),
-                        UnityEngine.Random.Range(-spawnRadius, spawnRadius), 0)
-                    ;
+                var position = new float3(random.NextFloat(-spawnRadius, spawnRadius),
+                    random.NextFloat(-spawnRadius, spawnRadius), 0); 
+
                 entityCommandBuffer.SetComponent(enemies[i], new LocalTransform()
                 {
                     Position = position,
