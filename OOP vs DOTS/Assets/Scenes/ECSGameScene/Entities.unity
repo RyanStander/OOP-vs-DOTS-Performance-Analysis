@@ -172,7 +172,7 @@ MonoBehaviour:
   PlayerPrefab: {fileID: 217801386110843838, guid: d5d50580a63cbb1448c508bdb6895ae9, type: 3}
   SafeZoneRadius: 10
   SkeletonPrefab: {fileID: 826522595574820320, guid: f57941539267ca542b6bf8d82c921931, type: 3}
-  SkeletonCount: 10
+  SkeletonCount: 10000
 --- !u!4 &1034633748
 Transform:
   m_ObjectHideFlags: 0
